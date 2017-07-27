@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+<div class="main">
+	<div class="contain">
+	<img src="{{avatar}}" id="image" />
+		<div class="basics">
+	<h1>{{name}}</h1>
+	<p>{{address.city}},{{address.country}} | {{job}}, {{company}}</p>
+	<p>{{email}} | {{phone}}</p>
+	</div>
+	</div>
+	<div id="education">
+		<ul>Education
+			<li>{{university}}</li>
+		</ul>
+		<ul>Skills
+		{{#skills}}
+			<li>{{.}}</li>
+		{{/skills}}
+		</ul>
+	</div>
+</div>
+</body>
+</html>

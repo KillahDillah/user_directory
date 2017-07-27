@@ -1,0 +1,79 @@
+html {box-sizing:border-box;}
+*, *:before, *:after {box-sizing:inherit;}
+
+body {
+  margin:0;
+  padding:0;
+  width: 1200px;
+}
+
+h1 {
+	font-size: xx-large;
+}
+
+ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+	justify-content: space-between;	
+}
+
+.list {
+	height: 100%;
+	width: 220px;
+	border: solid 1px lightgray;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+
+a {
+	text-decoration-line: none;
+}
+
+img {
+	width: 220px;
+	height: 125px;
+	padding-bottom: 10px;
+}
+
+.info {
+	padding-left: 15px;
+}
+
+#name {
+	font-size: large;
+	color: blue;
+	padding-bottom: 10px;
+}
+
+#job {
+	font-size: small;
+	color: black;
+}
+
+span {
+	font-size: small;
+	color: red;
+}
+
+#company {
+	font-size: small;
+	color: gray;
+} 
+
+
+.main {
+	text-align: center;
+	width: 800px;
+}
+
+#image {
+	border-radius: 100px;
+	border: solid 1px gray;
+	padding: 5px;
+	margin-right: 10px;
+}
+
+#education ul {
+	margin-right: 10px;
+}
