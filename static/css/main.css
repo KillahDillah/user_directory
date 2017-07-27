@@ -9,6 +9,7 @@ body {
 
 h1 {
 	font-size: xx-large;
+	margin-bottom: 10px;
 }
 
 ul {
@@ -63,8 +64,13 @@ span {
 
 
 .main {
-	text-align: center;
 	width: 800px;
+	margin: 80px 150px;
+}
+
+.contain {
+	display: flex;
+	margin-bottom: 15px;
 }
 
 #image {
@@ -72,8 +78,35 @@ span {
 	border: solid 1px gray;
 	padding: 5px;
 	margin-right: 10px;
+	width: 150px;
+	height: 150px;
 }
 
-#education ul {
-	margin-right: 10px;
+.basics {
+	margin-left: 15px;
+}
+
+
+.skills, #education {
+	display: flex;
+	margin:0px;
+	margin-bottom: 15px;
+}
+
+.items {
+	list-style-type: none;
+	margin-left: 15px;
+}
+
+.ulist {
+	width: 150px;
+	text-align: right;
+}
+
+#education li, {
+	font-weight: 400;
+}
+
+h4 {
+	margin: 0px;
 }

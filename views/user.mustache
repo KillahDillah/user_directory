@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="/css/main.css" />
 </head>
 <body>
 <div class="main">
@@ -11,19 +11,29 @@
 	<img src="{{avatar}}" id="image" />
 		<div class="basics">
 	<h1>{{name}}</h1>
-	<p>{{address.city}},{{address.country}} | {{job}}, {{company}}</p>
+	<p>{{address.city}},{{address.country}} | {{job}} {{/job}}, {{company}}</p>
+	
 	<p>{{email}} | {{phone}}</p>
+	
 	</div>
 	</div>
 	<div id="education">
-		<ul>Education
+		<div class="ulist">
+		<h4>Education</h4>
+		</div>
+		<div class="items">
 			<li>{{university}}</li>
-		</ul>
-		<ul>Skills
+		</div>
+	</div>
+	<div class="skills">
+		<div class="ulist">
+		<h4>Skills</h4>
+		</div>
+		<div class="items">
 		{{#skills}}
 			<li>{{.}}</li>
 		{{/skills}}
-		</ul>
+		</div>
 	</div>
 </div>
 </body>
