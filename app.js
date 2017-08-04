@@ -2,7 +2,11 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const mustacheExpress = require('mustache-express')
-const data = require('./data')
+const mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
+
+// Replace "test" with your database name.
+mongoose.connect('mongodb://localhost:27017/Futurama')
 
 
 app.engine('mustache', mustacheExpress());
@@ -11,19 +15,12 @@ app.set('view engine', 'mustache')
 
 app.use(express.static(path.join(__dirname, 'static')))
 
-app.get("/", function(req, res, next){
-  res.render("index", data)
+app.get ("/", function (req, res, next){
+  // db.collection("users").find().toArray(function(error,users){
+  //   console.log(users)
+  // })
 })
-////////////////create name////
-app.get("/user/:username", function(req,res,next){
-  var user = data.users.filter(function(person){
-    return person.username === req.params.username ////same name here////
-  })[0]
-
-  res.render("user", user)
-})
-
 
 app.listen(3000, function(){
-  console.log("App running on port 3000")
+  console.log("Listening on port 3000")
 })
